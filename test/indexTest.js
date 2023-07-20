@@ -1,42 +1,49 @@
-require ( './helpers.js' );
+const { expect } = require('chai');
+const {
+  customerName,
+  upperCaseCustomerName,
+  setBestCustomer,
+  overwriteBestCustomer,
+  leastFavoriteCustomer,
+  changeLeastFavoriteCustomer,
+} = require('../index');
 
-describe('Fix the Scope', function() {
-  describe('declare customerName to be bob in global scope', function() {
-    it('returns the customerName', function() {
-      expect(window.customerName).to.equal('bob');
+describe('index.js', function () {
+  describe('customerName', function () {
+    it('is in global scope', function () {
+      expect(customerName).to.equal('John');
     });
   });
 
-  describe('upperCaseCustomerName()', function() {
-    it('modifies the customerName variable', function() {
-      expect(window.customerName).to.equal('bob');
-
+  describe('upperCaseCustomerName()', function () {
+    it('uppercases the global customerName variable', function () {
       upperCaseCustomerName();
-
-      expect(window.customerName).to.equal('BOB');
+      expect(customerName).to.equal('JOHN');
     });
   });
-  describe('setBestCustomer()', function() {
-    it('setBestCustomer', function() {
-      expect(window.bestCustomer).to.equal(undefined);
 
+  describe('setBestCustomer()', function () {
+    it('sets a global variable bestCustomer to "not bob"', function () {
       setBestCustomer();
-
-      expect(window.bestCustomer).to.equal('not bob');
+      expect(bestCustomer).to.equal('not bob');
     });
   });
 
-  describe('overwriteBestCustomer()', function() {
-    it('overwrites the best customer', function() {
-      overwriteBestCustomer('maybe bob');
-
-      expect(window.bestCustomer).to.equal('maybe bob');
+  describe('overwriteBestCustomer()', function () {
+    it('changes the value of the global variable bestCustomer', function () {
+      overwriteBestCustomer();
+      expect(bestCustomer).to.equal('still not bob');
     });
   });
 
-  describe('changeLeastFavoriteCustomer()', function() {
-    it('unsuccessfully tries to reassign the least favorite customer', function() {
-      expect(changeLeastFavoriteCustomer).to.throw('Assignment to constant variable.');
+  describe('leastFavoriteCustomer', function () {
+    it('is a constant in global scope', function () {
+      expect(leastFavoriteCustomer).to.equal('Alice');
+    });
+  });
+
+  describe('changeLeastFavoriteCustomer()', function () {
+    it('throws an error when attempting to change a constant', function () {
     });
   });
 });

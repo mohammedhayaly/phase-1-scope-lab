@@ -1,0 +1,115 @@
+{
+  "stats": {
+    "suites": 7,
+    "tests": 6,
+    "passes": 5,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-07-20T09:26:43.552Z",
+    "end": "2023-07-20T09:26:43.707Z",
+    "duration": 155
+  },
+  "tests": [
+    {
+      "title": "is in global scope",
+      "fullTitle": "index.js customerName is in global scope",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "uppercases the global customerName variable",
+      "fullTitle": "index.js upperCaseCustomerName() uppercases the global customerName variable",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected 'John' to equal 'JOHN'",
+        "showDiff": true,
+        "actual": "John",
+        "expected": "JOHN",
+        "stack": "AssertionError: expected 'John' to equal 'JOHN'\n    at Context.<anonymous> (test/indexTest.js:21:31)\n    at process.processImmediate (node:internal/timers:476:21)"
+      }
+    },
+    {
+      "title": "sets a global variable bestCustomer to \"not bob\"",
+      "fullTitle": "index.js setBestCustomer() sets a global variable bestCustomer to \"not bob\"",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "changes the value of the global variable bestCustomer",
+      "fullTitle": "index.js overwriteBestCustomer() changes the value of the global variable bestCustomer",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "is a constant in global scope",
+      "fullTitle": "index.js leastFavoriteCustomer is a constant in global scope",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "throws an error when attempting to change a constant",
+      "fullTitle": "index.js changeLeastFavoriteCustomer() throws an error when attempting to change a constant",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [
+    {
+      "title": "uppercases the global customerName variable",
+      "fullTitle": "index.js upperCaseCustomerName() uppercases the global customerName variable",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected 'John' to equal 'JOHN'",
+        "showDiff": true,
+        "actual": "John",
+        "expected": "JOHN",
+        "stack": "AssertionError: expected 'John' to equal 'JOHN'\n    at Context.<anonymous> (test/indexTest.js:21:31)\n    at process.processImmediate (node:internal/timers:476:21)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "is in global scope",
+      "fullTitle": "index.js customerName is in global scope",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "sets a global variable bestCustomer to \"not bob\"",
+      "fullTitle": "index.js setBestCustomer() sets a global variable bestCustomer to \"not bob\"",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "changes the value of the global variable bestCustomer",
+      "fullTitle": "index.js overwriteBestCustomer() changes the value of the global variable bestCustomer",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "is a constant in global scope",
+      "fullTitle": "index.js leastFavoriteCustomer is a constant in global scope",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "throws an error when attempting to change a constant",
+      "fullTitle": "index.js changeLeastFavoriteCustomer() throws an error when attempting to change a constant",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ]
+}
